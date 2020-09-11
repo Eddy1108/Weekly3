@@ -10,7 +10,10 @@ int difficulty{ 5 };
 
 int guess{ 0 };
 
-int highscore{ 10 };
+
+int highscore1{ 10 };       //Highscore for Easy
+int highscore2{ 10 };       //Highscore for Medium
+int highscore3{ 10 };       //Highscore for Hard
 int attempts{ 0 };
 
 bool i = true;
@@ -80,12 +83,12 @@ void play()
     }
 
     std::cout << "\nYou guessed correctly in " << attempts << " tries!";
-    if (attempts < highscore) {
-        std::cout << "\nYou beat the highscore!" << "\n The Highscore was " << highscore;
-        highscore = attempts;
+    if (attempts < highscore1) {
+        std::cout << "\nYou beat the highscore!" << "\nThe Highscore was " << highscore1;
+        highscore1 = attempts;
     }
     else {
-        std::cout << "\nThe Highscore is: " << highscore;
+        std::cout << "\nThe Highscore is: " << highscore1;
     }
 }
 
